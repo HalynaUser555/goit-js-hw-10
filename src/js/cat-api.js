@@ -9,7 +9,6 @@ export class CatApiElement {
     constructor() {
         this.page = 1;
     }
-
     fetchBreeds() {
         return axios.get(`${ADDRESS_URL}/breeds`)
             .then(response => {
@@ -19,7 +18,6 @@ export class CatApiElement {
                 return response.data;
             });
     };
-
     fetchCatByBreed(breedId) {
         return axios.get(`${ADDRESS_URL}/images/search?breed_ids=` + breedId)
             .then(response => {
@@ -28,7 +26,6 @@ export class CatApiElement {
                 }
                 return response.data;
             })
-            // .then(console.log)
             .catch(console.log);
     }
 }

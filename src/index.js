@@ -35,10 +35,10 @@ selectEl.addEventListener('change', () => {
             const url = catInfo.url;
             const breed = catInfo.breeds[0];
             const catEl =
-                `<img src=${url} alt=${breed.name} height=400px>
-                <h1>${breed.name}</h1>
-                <h2>${breed.description}</h2>
-                <p><span>Temperament:</span> ${breed.temperament}</p>`;
+                `<img class="cat-cart" src=${url} alt=${breed.name}>
+                <h1 class="cat-name">${breed.name}</h1>
+                <h2 class = "cat-description">${breed.description}</h2>
+                <p class= "cat-temperament"><span class= "cat-span">Temperament:</span> ${breed.temperament}</p>`;
             catInfoEl.insertAdjacentHTML("beforeend", catEl);
             loaderApiInstance.hide()
         })
